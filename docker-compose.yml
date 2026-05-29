@@ -1,12 +1,7 @@
 services:
   app:
-    image: node:20.12.2
-    working_dir: /root
-    user: "${UID}:${GID}"
+    build: .
+    working_dir: /app
     volumes:
-      - ./app:/root
-    ports:
-      - "8080:8080"
-    stdin_open: true
-    tty: true
-    command: make dev
+      - ./app:/app
+    command: make test
