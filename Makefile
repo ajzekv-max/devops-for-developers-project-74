@@ -14,3 +14,6 @@ down:
 
 test:
 	$(COMPOSE) $(COMPOSE_FILE) up --abort-on-container-exit --exit-code-from app
+
+ci:
+	$(COMPOSE) $(COMPOSE_FILE) up --abort-on-container-exit --exit-code-from app
