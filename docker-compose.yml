@@ -1,7 +1,9 @@
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.production
+    image: azkvns/devops-for-developers-project-74
+    pull_policy: build
     working_dir: /app
-    volumes:
-      - ./app:/app
     command: make test
