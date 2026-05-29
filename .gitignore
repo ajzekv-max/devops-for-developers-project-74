@@ -1,2 +1,6 @@
 .env
 app/node_modules/
+app/dist/
+app/.cache/
+app/.npm/
+*.sqlite
