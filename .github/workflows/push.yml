@@ -9,6 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Prepare environment
+        run: cp .env.example .env
+
       - name: Run tests
         run: make ci
 
